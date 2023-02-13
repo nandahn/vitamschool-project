@@ -1,0 +1,318 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;;
+}
+
+
+
+:root{
+    --purple-primary: #9347c3;
+    --purple-secundary: #cb68f0;
+    --color-black: #140f07;
+    --color-white: #ffffe1;
+}
+
+body{
+    background: #fff;
+    padding: 0 1rem;
+}
+
+header,
+footer,
+.main-section,
+.courses-section {
+    border-color: var(--color-black);
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 1.25rem;
+}
+
+
+
+.logo{
+    font-size: 1.5rem;
+    color: var(--purple-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.logo:hover{
+    color: var(--purple-secundary);
+}
+
+header nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+nav a{
+    color: var(--color-black);
+    font-size: 1.25rem;
+    padding: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav a:hover{
+    color: var(--purple-secundary);
+}
+
+
+header nav a:nth-child(2n-1){
+    text-align: right;
+}
+
+.main-section{
+    padding-right: 0;
+    padding-bottom: 16rem;
+}
+
+h1{
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    line-height: 105%;
+    text-align: center;
+}
+
+
+#other-color{
+    color: var(--purple-primary);
+}
+
+.button{
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .75rem 1rem;
+    max-width: 14rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    color: var(--color-black);
+    transition: 0.2s;
+}
+
+.button-2{
+
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .75rem 1rem;
+    max-width: 14rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--purple-primary);
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    color: var(--color-black);
+    transition: 0.2s;
+}
+
+.button:hover{
+    background-color: var(--purple-secundary);
+}
+
+.courses-section{
+    padding-bottom: 5rem;
+    padding-top: -5rem;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.25rem;
+    margin-top: -8rem;
+    margin-bottom: 4rem;
+}
+
+.card{
+    background-color: var(--purple-primary);
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    max-width: 20rem;
+    padding: 2rem 0 0 2rem;
+}
+
+strong{
+    color: #fff;
+}
+
+.card:nth-child(2n){
+    align-self: end;
+    background-color: var(--purple-secundary);
+}
+
+.card strong{
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+/* .card a{
+    display: block;
+    margin: 3 rem 0 0 auto;
+    width: fit-content;
+} */
+
+.card a img{
+    display: block;
+    margin: 3 rem 0 0 auto;
+    width: 50px;
+    height: 50px;
+}
+.cards img{
+    height: 200px;
+    width: 200px;
+}
+
+
+footer{
+    border-bottom: 0;
+    padding: 1 rem 1.25rem 4rem;
+
+}
+
+footer nav a{
+    display: block;
+    padding-left: 0;
+}
+footer img{
+    height: 150px;
+    width: 150px;
+}
+.newsletter label{
+    display: block;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.newsletter input{
+    font-size: 1.5rem;
+    padding: .5rem;
+    width: 100%;
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px var(--color-black);
+
+}
+
+
+.description{
+    text-align: center;
+}
+
+/* classes genéricas */
+
+.mt-1{
+    margin-top: 1rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.mb-2{
+    margin-bottom: 2rem;
+}
+
+.mx-auto{
+    margin-left: 3rem;
+}
+
+.text-primary{
+    color: var(--purple-primary);
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* Responsividade */
+
+@media screen and (min-width: 40rem){
+    header nav{
+        display: block;
+        text-align: center;
+    }
+
+    .cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card:nth-child(2n){
+        margin-top: 1rem;
+    }
+
+@media screen and (min-width: 48rem){
+    header div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header nav,
+    header .button{
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 72rem){
+    .container{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 72rem;
+    }  
+    
+    .banner{
+        height: 450px;
+        width: 450px;
+    }
+
+    .container.row-reverse{
+        flex-direction: row-reverse;
+    }
+    
+    .about{
+        flex: 2;
+    }
+
+
+    .about p{
+        font-size: 1.25rem;
+        max-width: 16rem;
+    }
+
+    footer nav{
+        flex: 1;
+    }
+
+    .newsletter{
+        flex: 3;
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    .container{
+        max-width: 90rem;
+        padding-left: 2rem;
+    }
+    
+}
+
+}
